@@ -1,0 +1,63 @@
+Task: Image data labeling tool
+
+This tool is designed to annotate cars based on images. Upon opening the tool, users are
+presented with two main options: "Start New Annotation" and "Load Existing Annotation."
+
+Start new annotation
+    ● Users can upload an image from their computer, which will be displayed on a canvas.
+    ● They can annotate the image by drawing rectangles around cars.
+    ● A "Save" button will allow users to save their annotations and the associated image to
+    the backend.
+    ● Before saving, the system must validate that no two annotations (rectangles) overlap.
+    If at least two annotations overlap, the system should return an error and prevent
+    saving.
+
+Load existing annotation
+    ● Users can view a list of previously saved annotations, with one entry per image.
+    ● Selecting an annotation will load the corresponding image and its annotations onto
+    the canvas.
+    ● Users can continue annotating by adding more rectangles or deleting existing ones.
+    ● Updated annotations can be saved back to the backend.
+
+Requirements
+    Frontend (canvas drawing)
+        ● Create a simple canvas-based interface for labeling objects in an image.
+        ● Include functionality to:
+        ❖ Open an image from the user's local system and display it on the canvas.
+        ❖ Allow users to draw rectangles around cars in the image.
+        ❖ Add a "Save" button to save the labeled data.
+        ❖ Implement a "Clear Annotations" button to remove all labels.
+        ❖ Allow users to click on a rectangle to remove it.
+
+    Backend (API)
+        ● Develop API endpoints to save the labeled data (bounding boxes and metadata) along
+        with the image le in the database.
+        ● Save the image as binary data in the database.
+        ● The backend implementation must be done in Python, and you are free to use any
+        library of your choice.
+
+    Database
+        ● You are free to design and implement the database structure as you see t,
+        considering the requirements.
+
+    Deliverables
+        ● A working application demonstrating the above functionality.
+        ● Code should be well-commented and follow best practices.
+        ● Submit the database schema and a brief README on how to set up and test the
+        application.
+        ● Push to GitHub.
+
+
+What is going to be evaluated
+    1. Code clarity
+        ● The code should be clean, readable, and well-structured.
+        ● Proper use of comments to explain complex or non-obvious logic.
+    2. Solution optimization
+        ● Ensure the solution is efcient in terms of performance and resource usage.
+        ● Minimize redundant operations and ensure scalability for large images or multiple
+        annotations.
+        ● Optimize backend responses and database queries for fast data retrieval and storage.
+    3. Error handling and validation
+        ● Proper validation of user inputs (e.g., preventing overlapping rectangles).
+        ● Handle edge cases gracefully without crashes or unexpected behavior.
+        ● Provide clear and informative error messages to the user.

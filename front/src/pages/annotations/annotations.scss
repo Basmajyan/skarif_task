@@ -1,0 +1,25 @@
+.annotations {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    .annotationsList {
+        width: 100%;
+        padding-top: 50px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+
+        gap: 30px;
+
+        .annotationItem {
+            width: 20%;
+            cursor: pointer;
+
+            img {
+                width: 100%;
+            }
+        }
+    }
+}
