@@ -24,6 +24,7 @@ services:
       POSTGRES_DB: ${DB}
     volumes:
       - postgres_data:/var/lib/postgresql/data
+      
   # admin for postgres, if you want to look at the db
   # pgadmin:
   #   container_name: annotation_db_admin
